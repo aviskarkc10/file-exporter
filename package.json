@@ -1,0 +1,20 @@
+{
+  "name": "exporter",
+  "version": "1.0.0",
+  "description": "A utility to export pdf and csv files for your web app.",
+  "main": "build/lib.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack"
+  },
+  "author": "Aviskar KC",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "webpack": "^4.17.1"
+  }
+}
