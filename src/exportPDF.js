@@ -1,7 +1,9 @@
 import { checkForFileName } from './checkForFileName';
 import { downloadFileFromObjectUrl } from './downloadFileFromObjectURL';
+import { checkDataForString } from './checkForString';
 
 export function downloadPDFFromBase64(data, fileName) {
+  checkDataForString(data);
   checkForFileName(fileName);
   const decodedData = atob(data);
   const len = decodedData.length;
