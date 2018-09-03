@@ -3,17 +3,27 @@ import { checkDataForString } from './checkForString';
 import { downloadFileFromObjectUrl } from './downloadFileFromObjectURL';
 
 export function downloadCSV(data, fileName) {
-  checkDataForString(data);
-  checkForFileName(fileName);
-  const dataBlob = new Blob([data], { type: 'text/csv' });
+  try {
+    checkDataForString(data);
+    checkForFileName(fileName);
+    const dataBlob = new Blob([data], { type: 'text/csv' });
 
-  downloadFileFromObjectUrl(dataBlob, fileName);
+    downloadFileFromObjectUrl(dataBlob, fileName);
+  }
+  catch (error) {
+    throw error;
+  }
 }
 
 export function downloadCSVFromBase64(data, fileName) {
-  checkDataForString(data);
-  checkForFileName(fileName);  
-  const decodedData = atob(data);
+  try {
+    checkDataForString(data);
+    checkForFileName(fileName);
+    const decodedData = atob(data);
 
-  downloadCSV(decodedData, fileName);
+    downloadCSV(decodedData, fileName);
+  }
+  catch (error) {
+    throw error;
+  }
 }
