@@ -1,4 +1,5 @@
 import { checkForFileName } from './checkForFileName';
+import { checkForWindow } from './checkForWindow';
 
 export function downloadFileFromObjectUrl(dataBlob, fileName) {
   try {
