@@ -51,9 +51,8 @@ downloadPDFFromBase64(data, fileName);
 
 # Contributing
 
-Your inputs to the project are welcome. You can create an issue or send in a PR.
+Your inputs to the project are welcome. You can create an issue or send in a PR. Please see (here)[(https://github.com/aviskarkc10/file-exporter/blob/master/CONTRIBUTION.md)]
 
 # License
 
 [MIT](https://github.com/aviskarkc10/file-exporter/blob/master/LICENSE)
-
