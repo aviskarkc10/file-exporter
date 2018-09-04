@@ -1,6 +1,6 @@
 import { windowNotFoundError } from './errorMessages';
 
-export function checkForWindow() {
+export function checkForWindow () {
   if (!window) {
     throw new Error(windowNotFoundError);
   }

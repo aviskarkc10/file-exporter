@@ -2,7 +2,7 @@ import { checkForFileName } from './checkForFileName';
 import { downloadFileFromObjectUrl } from './downloadFileFromObjectURL';
 import { checkDataForString } from './checkForString';
 
-export function downloadPDFFromBase64(data, fileName) {
+export function downloadPDFFromBase64 (data, fileName) {
   try {
     checkDataForString(data);
     checkForFileName(fileName);
@@ -16,8 +16,7 @@ export function downloadPDFFromBase64(data, fileName) {
 
     const dataBlob = new Blob([bytes.buffer], { type: 'application/pdf' });
     downloadFileFromObjectUrl(dataBlob, fileName);
-  }
-  catch (error) {
+  } catch (error) {
     throw error;
   }
 }
