@@ -19,7 +19,7 @@ import exporter from 'exporter';
 ## Named imports
 
 ```
-import { downloadCSV, downloadCSVFromBase64, downloadPDFromBase64 }
+import { downloadCSV, downloadCSVFromBase64, downloadPDFromBase64 } from 'exporter';
 ```
 
 # Examples
