@@ -1,4 +1,4 @@
-# File Exporter [WIP]
+# File Exporter
 
 A utility to export pdf and csv files from your web app. File Exporter allows you to download pdf and csv files from strings or base64 encodings on your client.
 
