@@ -1,6 +1,12 @@
 import { checkForFileName } from './checkForFileName';
 import { checkForWindow } from './checkForWindow';
 
+/**
+ * Download file from object url.
+ *
+ * @param {string} dataBlob
+ * @param {string} fileName
+ */
 export function downloadFileFromObjectUrl (dataBlob, fileName) {
   try {
     checkForFileName(fileName);

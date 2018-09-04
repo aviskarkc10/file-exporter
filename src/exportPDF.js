@@ -2,6 +2,12 @@ import { checkForFileName } from './checkForFileName';
 import { downloadFileFromObjectUrl } from './downloadFileFromObjectURL';
 import { checkDataForString } from './checkForString';
 
+/**
+ * Download PDF file from base64 encoded string.
+ *
+ * @param {string} data
+ * @param {string} fileName
+ */
 export function downloadPDFFromBase64 (data, fileName) {
   try {
     checkDataForString(data);
