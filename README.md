@@ -42,6 +42,11 @@ import { downloadCSV, downloadCSVFromBase64, downloadPDFromBase64 } from 'file-e
 // Exporting CSV from string
 downloadCSV(data, fileName);
 
+// Example format of data for downloadCSV function
+Name,Address
+John Smith,New York
+John Doe,Mississippi
+
 // Exporting CSV from base64
 downloadCSVFromBase64(data, fileName);
 
