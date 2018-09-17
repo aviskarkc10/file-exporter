@@ -1,5 +1,7 @@
 import { checkForFileName } from './checkForFileName';
 import { checkDataForString } from './checkForString';
+import { checkDataForArray } from './checkDataForArray';
+import { convertArrayToCSVString } from './convertArrayToCSVString';
 import { downloadFileFromObjectUrl } from './downloadFileFromObjectURL';
 
 /**
@@ -15,6 +17,25 @@ export function downloadCSV (data, fileName) {
     const dataBlob = new Blob([data], { type: 'text/csv' });
 
     downloadFileFromObjectUrl(dataBlob, fileName);
+  } catch (error) {
+    throw error;
+  }
+}
+
+/**
+ * Download CSV file from string.
+ *
+ * @param {string} data
+ * @param {string} fileName
+ */
+export function downloadCSVFromArray (data, fileName) {
+  try {
+    checkDataForArray(data);
+    checkForFileName(fileName);
+
+    const csvString = convertArrayToCSVString(data);
+
+    downloadCSV(csvString, fileName);
   } catch (error) {
     throw error;
   }

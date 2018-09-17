@@ -1,4 +1,4 @@
-import { dataTypeError, fileNameTypeError } from './errorMessages';
+import { dataStringTypeError, fileNameTypeError } from './errorMessages';
 
 /**
  * Validate if data is of type string.
@@ -7,7 +7,7 @@ import { dataTypeError, fileNameTypeError } from './errorMessages';
  */
 export function checkDataForString (data) {
   if (typeof data !== 'string') {
-    throw new Error(dataTypeError);
+    throw new Error(dataStringTypeError);
   }
 }
 

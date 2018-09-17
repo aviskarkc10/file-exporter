@@ -1,6 +1,6 @@
 let expect = require('chai').expect;
 let { checkDataForString, checkFileNameForString } = require('../src/checkForString');
-let { dataTypeError, fileNameTypeError } = require('../src/errorMessages');
+let { dataStringTypeError, fileNameTypeError } = require('../src/errorMessages');
 
 describe('checking data for string', () => {
   it('should return undefined as data exists', () => {
@@ -10,22 +10,22 @@ describe('checking data for string', () => {
     expect(checkDataForString('flags')).to.equal(undefined);
   })
   it('should throw an error for non-existant data', () => {
-    expect(() => checkDataForString()).to.throw(dataTypeError);
+    expect(() => checkDataForString()).to.throw(dataStringTypeError);
   })
   it('should throw an error for array as data', () => {
-    expect(() => checkDataForString([1, 2, 3])).to.throw(dataTypeError);
+    expect(() => checkDataForString([1, 2, 3])).to.throw(dataStringTypeError);
   })
   it('should throw an error for number as data', () => {
-    expect(() => checkDataForString(10000)).to.throw(dataTypeError);
+    expect(() => checkDataForString(10000)).to.throw(dataStringTypeError);
   })
   it('should throw an error for object as data', () => {
-    expect(() => checkDataForString({ name: 'Mocha Test' })).to.throw(dataTypeError);
+    expect(() => checkDataForString({ name: 'Mocha Test' })).to.throw(dataStringTypeError);
   })
   it('should throw an error for function as data', () => {
-    expect(() => checkDataForString(() => 5)).to.throw(dataTypeError);
+    expect(() => checkDataForString(() => 5)).to.throw(dataStringTypeError);
   })
   it('should throw an error for function as data', () => {
-    expect(() => checkDataForString(() => '5')).to.throw(dataTypeError);
+    expect(() => checkDataForString(() => '5')).to.throw(dataStringTypeError);
   })
 })
 
