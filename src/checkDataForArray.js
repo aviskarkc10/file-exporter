@@ -9,4 +9,6 @@ export function checkDataForArray (data) {
   if (!Array.isArray(data)) {
     throw new Error(dataArrayTypeError);
   }
+
+  return true;
 }
