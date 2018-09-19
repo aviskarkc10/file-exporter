@@ -33,7 +33,7 @@ import fileExporter from 'file-exporter';
 ## Named imports
 
 ```
-import { downloadCSV, downloadCSVFromBase64, downloadPDFromBase64 } from 'file-exporter';
+import { downloadCSV, downloadCSVFromBase64, downloadPDFromBase64, downloadCSVFromArray } from 'file-exporter';
 ```
 
 # Examples
