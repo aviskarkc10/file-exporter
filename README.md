@@ -47,6 +47,12 @@ Name,Address
 John Smith,New York
 John Doe,Mississippi
 
+// Exporting CSV from array of objects
+downloadCSVFromArray(data, fileName);
+
+// Example format of data for downloadCSVFromArray function
+[{name: 'John Smith', address: 'New York'}, {name: 'John Doe', address: 'Mississippi'}]
+
 // Exporting CSV from base64
 downloadCSVFromBase64(data, fileName);
 
